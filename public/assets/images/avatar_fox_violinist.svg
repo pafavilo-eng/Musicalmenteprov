@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bg_fox_violinist" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </radialGradient>
+    <filter id="shadow_fox_violinist" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <!-- Background circle with smooth 3D gradient -->
+  <rect width="256" height="256" rx="64" fill="url(#bg_fox_violinist)" />
+  <circle cx="128" cy="128" r="105" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6" />
+  
+  <!-- Floating musical note decoration -->
+    <!-- Vector musical note decorations (font-free, 100% reliable) -->
+  <g opacity="0.35" fill="#ffffff" transform="translate(28, 40) scale(0.7)">
+    <circle cx="16" cy="24" r="8" />
+    <rect x="22" y="4" width="4" height="20" rx="2" />
+    <path d="M 26 4 C 32 4, 38 8, 38 16 C 35 14, 30 12, 26 12 Z" />
+  </g>
+  <g opacity="0.35" fill="#ffffff" transform="translate(196, 48) scale(0.6)">
+    <circle cx="12" cy="24" r="7" />
+    <circle cx="32" cy="20" r="7" />
+    <rect x="17" y="6" width="3" height="18" rx="1.5" />
+    <rect x="37" y="2" width="3" height="18" rx="1.5" />
+    <polygon points="17,6 40,2 40,7 17,11" />
+  </g>
+
+  <!-- Main 3D Character Art -->
+  <g filter="url(#shadow_fox_violinist)">
+    
+      <!-- Fox ears -->
+      <polygon points="56,60 88,110 30,100" fill="#ea580c" />
+      <polygon points="56,68 80,105 38,100" fill="#fed7aa" />
+      <polygon points="200,60 226,100 168,110" fill="#ea580c" />
+      <polygon points="200,68 218,100 176,105" fill="#fed7aa" />
+      <!-- Fox Head -->
+      <ellipse cx="128" cy="138" rx="66" ry="58" fill="#f97316" />
+      <path d="M 80 146 Q 128 190 176 146 Q 128 178 80 146 Z" fill="#ffffff" />
+      <!-- Eyes -->
+      <ellipse cx="104" cy="132" rx="9" ry="12" fill="#1e293b" />
+      <ellipse cx="152" cy="132" rx="9" ry="12" fill="#1e293b" />
+      <circle cx="107" cy="128" r="3.5" fill="#ffffff" />
+      <circle cx="155" cy="128" r="3.5" fill="#ffffff" />
+      <!-- Cheeks -->
+      <circle cx="86" cy="144" r="8" fill="#fda4af" opacity="0.6" />
+      <circle cx="170" cy="144" r="8" fill="#fda4af" opacity="0.6" />
+      <!-- Nose & Mouth -->
+      <ellipse cx="128" cy="154" rx="7" ry="5" fill="#0f172a" />
+      <path d="M 124 162 Q 128 168 132 162" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      <!-- Violin -->
+      <g transform="translate(142, 142) rotate(15) scale(0.65)">
+        <path d="M 40 20 C 15 10 15 60 30 75 C 20 85 15 110 35 130 C 55 150 75 140 80 120 C 85 140 105 150 125 130 C 145 110 140 85 130 75 C 145 60 145 10 120 20 C 100 10 90 35 80 35 C 70 35 60 10 40 20 Z" fill="#92400e" stroke="#78350f" stroke-width="4" />
+        <rect x="74" y="-30" width="12" height="60" fill="#1f2937" rx="3" />
+        <circle cx="80" cy="-40" r="14" fill="#78350f" />
+        <line x1="77" y1="-30" x2="77" y2="120" stroke="#fef08a" stroke-width="1.5" />
+        <line x1="83" y1="-30" x2="83" y2="120" stroke="#fef08a" stroke-width="1.5" />
+      </g>
+    
+  </g>
+</svg>

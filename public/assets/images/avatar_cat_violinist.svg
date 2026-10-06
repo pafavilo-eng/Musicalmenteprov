@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Background 3D Radial Gradient -->
+    <radialGradient id="bg_cat_3d" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#fbcfe8" />
+      <stop offset="60%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#db2777" />
+    </radialGradient>
+    
+    <!-- 3D Clay Body Gradient -->
+    <radialGradient id="cat_fur_3d" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fff1f2" />
+      <stop offset="50%" stop-color="#fce7f3" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </radialGradient>
+
+    <!-- 3D Ginger Patch Gradient -->
+    <radialGradient id="cat_patch_3d" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fdba74" />
+      <stop offset="70%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </radialGradient>
+
+    <!-- 3D Wood Violin Gradient -->
+    <linearGradient id="violin_wood_3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="35%" stop-color="#d97706" />
+      <stop offset="85%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <!-- 3D Cartoon Eye Gradient -->
+    <radialGradient id="cat_iris_3d" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="65%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter for 3D Volume -->
+    <filter id="soft_3d_shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#831843" flood-opacity="0.3" />
+    </filter>
+    <filter id="violin_shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#451a03" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Container Pill Background with 3D Depth -->
+  <rect width="300" height="300" rx="75" fill="url(#bg_cat_3d)" />
+  <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="6" />
+
+  <!-- Subtle Floating Musical Notes in Background -->
+  <g fill="rgba(255,255,255,0.35)" transform="translate(30, 45)">
+    <circle cx="12" cy="18" r="6" />
+    <rect x="16" y="2" width="3" height="16" rx="1.5" />
+    <path d="M 19 2 Q 26 2 28 8 Q 23 8 19 6 Z" />
+  </g>
+  <g fill="rgba(255,255,255,0.35)" transform="translate(235, 60)">
+    <circle cx="10" cy="16" r="5" />
+    <circle cx="26" cy="13" r="5" />
+    <rect x="14" y="4" width="2.5" height="13" rx="1" />
+    <rect x="30" y="1" width="2.5" height="13" rx="1" />
+    <polygon points="14,4 32,1 32,5 14,8" />
+  </g>
+
+  <!-- Main 3D Kitten Character -->
+  <g filter="url(#soft_3d_shadow)">
+    <!-- Ears with 3D Depth -->
+    <!-- Left Ear -->
+    <path d="M 85 105 Q 70 45 110 65 Q 120 95 110 115 Z" fill="url(#cat_patch_3d)" />
+    <path d="M 90 100 Q 82 65 105 75 Q 110 95 102 105 Z" fill="#fda4af" opacity="0.85" />
+    <!-- Right Ear -->
+    <path d="M 215 105 Q 230 45 190 65 Q 180 95 190 115 Z" fill="url(#cat_fur_3d)" />
+    <path d="M 210 100 Q 218 65 195 75 Q 190 95 198 105 Z" fill="#fda4af" opacity="0.85" />
+
+    <!-- 3D Puffy Cheeks & Head -->
+    <ellipse cx="150" cy="148" rx="68" ry="60" fill="url(#cat_fur_3d)" />
+    <!-- Ginger patch over right eye -->
+    <path d="M 130 95 Q 195 90 205 130 Q 190 170 145 155 Z" fill="url(#cat_patch_3d)" opacity="0.9" />
+
+    <!-- Soft 3D Specular Highlight on forehead -->
+    <ellipse cx="135" cy="115" rx="25" ry="12" fill="#ffffff" opacity="0.45" transform="rotate(-10 135 115)" />
+
+    <!-- Cute Big 3D Cartoon Eyes -->
+    <!-- Left Eye -->
+    <g transform="translate(112, 138)">
+      <ellipse cx="0" cy="0" rx="14" ry="17" fill="#ffffff" />
+      <ellipse cx="1" cy="0" rx="11" ry="14" fill="url(#cat_iris_3d)" />
+      <ellipse cx="2" cy="1" rx="7" ry="10" fill="#0f172a" />
+      <!-- Catchlight highlights -->
+      <circle cx="-2" cy="-4" r="4.5" fill="#ffffff" />
+      <circle cx="4" cy="4" r="2" fill="#ffffff" />
+    </g>
+
+    <!-- Right Eye -->
+    <g transform="translate(188, 138)">
+      <ellipse cx="0" cy="0" rx="14" ry="17" fill="#ffffff" />
+      <ellipse cx="-1" cy="0" rx="11" ry="14" fill="url(#cat_iris_3d)" />
+      <ellipse cx="-2" cy="1" rx="7" ry="10" fill="#0f172a" />
+      <!-- Catchlight highlights -->
+      <circle cx="-5" cy="-4" r="4.5" fill="#ffffff" />
+      <circle cx="1" cy="4" r="2" fill="#ffffff" />
+    </g>
+
+    <!-- 3D Glossy Nose -->
+    <path d="M 145 155 Q 150 152 155 155 Q 150 162 145 155 Z" fill="#fb7185" />
+    <circle cx="149" cy="154" r="1.5" fill="#ffffff" opacity="0.8" />
+
+    <!-- Cheerful Cat Smile -->
+    <path d="M 143 162 Q 150 168 157 162" stroke="#be123c" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 136 160 Q 143 166 148 163" stroke="#be123c" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <path d="M 164 160 Q 157 166 152 163" stroke="#be123c" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Rosy 3D Blushing Cheeks -->
+    <circle cx="98" cy="155" r="12" fill="#f43f5e" opacity="0.4" />
+    <circle cx="202" cy="155" r="12" fill="#f43f5e" opacity="0.4" />
+
+    <!-- Cute Whiskers -->
+    <line x1="85" y1="150" x2="60" y2="145" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+    <line x1="85" y1="156" x2="58" y2="158" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+    <line x1="215" y1="150" x2="240" y2="145" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+    <line x1="215" y1="156" x2="242" y2="158" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+  </g>
+
+  <!-- 3D Shiny Wooden Violin Held by Kitten -->
+  <g filter="url(#violin_shadow)" transform="translate(100, 160) rotate(-18)">
+    <!-- Violin Body -->
+    <path d="M 20 25 C 10 35, 10 50, 18 60 C 12 68, 12 78, 22 88 C 35 98, 55 98, 68 88 C 78 78, 78 68, 72 60 C 80 50, 80 35, 70 25 C 55 12, 35 12, 20 25 Z" fill="url(#violin_wood_3d)" />
+    <!-- Violin Highlight -->
+    <path d="M 25 30 C 20 40, 20 50, 25 58" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
+    <!-- F-Holes -->
+    <path d="M 33 45 Q 36 52 32 60" stroke="#291203" stroke-width="2" fill="none" stroke-linecap="round" />
+    <path d="M 57 45 Q 54 52 58 60" stroke="#291203" stroke-width="2" fill="none" stroke-linecap="round" />
+    <!-- Fingerboard & Strings -->
+    <rect x="42" y="10" width="6" height="60" rx="2" fill="#18181b" />
+    <line x1="43" y1="10" x2="43" y2="85" stroke="#ffffff" stroke-width="0.8" opacity="0.9" />
+    <line x1="45" y1="10" x2="45" y2="85" stroke="#ffffff" stroke-width="0.8" opacity="0.9" />
+    <line x1="47" y1="10" x2="47" y2="85" stroke="#ffffff" stroke-width="0.8" opacity="0.9" />
+    <!-- Bridge -->
+    <rect x="40" y="62" width="10" height="3" rx="1" fill="#fef08a" />
+    <!-- Bow -->
+    <line x1="-5" y1="52" x2="95" y2="52" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+    <line x1="-3" y1="54" x2="93" y2="54" stroke="#ffffff" stroke-width="1.2" opacity="0.9" />
+  </g>
+
+  <!-- Puffy Paws Resting on Violin -->
+  <ellipse cx="118" cy="208" rx="14" ry="11" fill="url(#cat_fur_3d)" />
+  <ellipse cx="178" cy="214" rx="14" ry="11" fill="url(#cat_patch_3d)" />
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bg_lion_conductor" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </radialGradient>
+    <filter id="shadow_lion_conductor" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <!-- Background circle with smooth 3D gradient -->
+  <rect width="256" height="256" rx="64" fill="url(#bg_lion_conductor)" />
+  <circle cx="128" cy="128" r="105" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6" />
+  
+  <!-- Floating musical note decoration -->
+    <!-- Vector musical note decorations (font-free, 100% reliable) -->
+  <g opacity="0.35" fill="#ffffff" transform="translate(28, 40) scale(0.7)">
+    <circle cx="16" cy="24" r="8" />
+    <rect x="22" y="4" width="4" height="20" rx="2" />
+    <path d="M 26 4 C 32 4, 38 8, 38 16 C 35 14, 30 12, 26 12 Z" />
+  </g>
+  <g opacity="0.35" fill="#ffffff" transform="translate(196, 48) scale(0.6)">
+    <circle cx="12" cy="24" r="7" />
+    <circle cx="32" cy="20" r="7" />
+    <rect x="17" y="6" width="3" height="18" rx="1.5" />
+    <rect x="37" y="2" width="3" height="18" rx="1.5" />
+    <polygon points="17,6 40,2 40,7 17,11" />
+  </g>
+
+  <!-- Main 3D Character Art -->
+  <g filter="url(#shadow_lion_conductor)">
+    
+      <!-- Lion Mane -->
+      <circle cx="128" cy="136" r="76" fill="#ea580c" />
+      <!-- Mane tufts -->
+      <circle cx="70" cy="90" r="24" fill="#c2410c" />
+      <circle cx="186" cy="90" r="24" fill="#c2410c" />
+      <circle cx="60" cy="150" r="24" fill="#c2410c" />
+      <circle cx="196" cy="150" r="24" fill="#c2410c" />
+      <circle cx="90" cy="200" r="24" fill="#c2410c" />
+      <circle cx="166" cy="200" r="24" fill="#c2410c" />
+      <!-- Head -->
+      <circle cx="128" cy="136" r="54" fill="#fde047" />
+      <!-- Ears -->
+      <circle cx="88" cy="88" r="16" fill="#fde047" />
+      <circle cx="88" cy="88" r="9" fill="#f59e0b" />
+      <circle cx="168" cy="88" r="16" fill="#fde047" />
+      <circle cx="168" cy="88" r="9" fill="#f59e0b" />
+      <!-- Snout -->
+      <ellipse cx="128" cy="150" rx="26" ry="18" fill="#fef08a" />
+      <!-- Eyes -->
+      <ellipse cx="108" cy="126" rx="7" ry="10" fill="#1e293b" />
+      <ellipse cx="148" cy="126" rx="7" ry="10" fill="#1e293b" />
+      <circle cx="110" cy="123" r="2.5" fill="#ffffff" />
+      <circle cx="150" cy="123" r="2.5" fill="#ffffff" />
+      <!-- Nose & Smile -->
+      <polygon points="128,145 120,138 136,138" fill="#78350f" />
+      <path d="M 122 154 Q 128 160 134 154" stroke="#78350f" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      <!-- Conductor Baton -->
+      <line x1="140" y1="180" x2="200" y2="120" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+      <circle cx="202" cy="118" r="5" fill="#f59e0b" />
+    
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "name": "MusicalMente — Quiz Musical Educativo",
+  "description": "Aplicativo mobile educativo e gamificado de quiz musical para crianças e jovens baseado na Fase 1 do Método Simplificado de Aprendizagem Musical (MSA). Suporte a PT-BR, FR-CA e EN-CA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

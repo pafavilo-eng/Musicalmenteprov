@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="samuel_bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#c4b5fd" />
+      <stop offset="60%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#4c1d95" />
+    </radialGradient>
+
+    <!-- 3D Skin -->
+    <radialGradient id="samuel_skin" cx="40%" cy="30%" fx="32%" fy="22%" r="65%">
+      <stop offset="0%" stop-color="#ffedd5" />
+      <stop offset="60%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fba858" />
+    </radialGradient>
+
+    <!-- 3D Dark Curly Hair -->
+    <radialGradient id="samuel_hair" cx="38%" cy="25%" fx="30%" fy="18%" r="65%">
+      <stop offset="0%" stop-color="#451a03" />
+      <stop offset="60%" stop-color="#1f1004" />
+      <stop offset="100%" stop-color="#0c0501" />
+    </radialGradient>
+
+    <!-- Soft Linen Temple Tunic -->
+    <linearGradient id="temple_tunic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <filter id="shadow_3d" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="128" fill="url(#samuel_bg)" />
+  <circle cx="128" cy="128" r="122" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" />
+
+  <!-- Heavenly golden melody glow rays -->
+  <g opacity="0.3" stroke="#fef08a" stroke-width="2" stroke-linecap="round">
+    <line x1="128" y1="20" x2="128" y2="40" />
+    <line x1="80" y1="36" x2="90" y2="52" />
+    <line x1="176" y1="36" x2="166" y2="52" />
+  </g>
+
+  <!-- Main 3D Cartoon Samuel (Attentive Listener & Music Learner) -->
+  <g filter="url(#shadow_3d)">
+    <!-- Shoulders in Linen Tunic with Blue Sash -->
+    <ellipse cx="128" cy="220" rx="56" ry="40" fill="url(#temple_tunic)" />
+    <!-- Blue Sash -->
+    <path d="M 88 185 L 168 235 L 148 245 L 76 195 Z" fill="#3b82f6" />
+
+    <!-- Neck -->
+    <rect x="118" y="160" width="20" height="24" rx="10" fill="url(#samuel_skin)" />
+
+    <!-- 3D Boy Head -->
+    <ellipse cx="128" cy="128" rx="46" ry="48" fill="url(#samuel_skin)" />
+
+    <!-- Cute Curls of Hair with 3D Spherical Volume -->
+    <circle cx="88" cy="98" r="16" fill="url(#samuel_hair)" />
+    <circle cx="112" cy="84" r="18" fill="url(#samuel_hair)" />
+    <circle cx="144" cy="84" r="18" fill="url(#samuel_hair)" />
+    <circle cx="168" cy="98" r="16" fill="url(#samuel_hair)" />
+    <circle cx="78" cy="116" r="14" fill="url(#samuel_hair)" />
+    <circle cx="178" cy="116" r="14" fill="url(#samuel_hair)" />
+    <!-- Forehead Bang Curls -->
+    <circle cx="102" cy="100" r="12" fill="url(#samuel_hair)" />
+    <circle cx="128" cy="94" r="14" fill="url(#samuel_hair)" />
+    <circle cx="154" cy="100" r="12" fill="url(#samuel_hair)" />
+
+    <!-- Big Expressive Curious Eyes (Attentive to Sound!) -->
+    <ellipse cx="110" cy="128" rx="10" ry="13" fill="#ffffff" />
+    <ellipse cx="146" cy="128" rx="10" ry="13" fill="#ffffff" />
+    <!-- Bright Amber/Brown Iris looking up with wonder -->
+    <circle cx="111" cy="126" r="7.5" fill="#92400e" />
+    <circle cx="145" cy="126" r="7.5" fill="#92400e" />
+    <!-- Pupil -->
+    <circle cx="111" cy="126" r="4.5" fill="#000000" />
+    <circle cx="145" cy="126" r="4.5" fill="#000000" />
+    <!-- 3D Specular Catchlights -->
+    <circle cx="109" cy="123" r="3" fill="#ffffff" />
+    <circle cx="143" cy="123" r="3" fill="#ffffff" />
+    <circle cx="113" cy="128" r="1.3" fill="#ffffff" />
+    <circle cx="147" cy="128" r="1.3" fill="#ffffff" />
+    <!-- Friendly Eyebrows raised in curiosity -->
+    <path d="M 98 114 Q 110 108 122 112" stroke="#1f1004" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 134 112 Q 146 108 158 114" stroke="#1f1004" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Small Button Nose -->
+    <path d="M 127 136 Q 128 140 129 136" stroke="#d97706" stroke-width="2" fill="none" stroke-linecap="round" />
+
+    <!-- Rosy Glowing Cheeks -->
+    <circle cx="96" cy="142" r="9" fill="#f43f5e" opacity="0.4" />
+    <circle cx="160" cy="142" r="9" fill="#f43f5e" opacity="0.4" />
+
+    <!-- Pure Sweet Smile -->
+    <path d="M 119 148 Q 128 158 137 148" stroke="#9a3412" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Hand cupped at ear listening to the melody! -->
+    <g transform="translate(172, 126)">
+      <path d="M 0 0 C 8 -10, 18 0, 14 18 C 10 24, 0 20, 0 10 Z" fill="url(#samuel_skin)" stroke="#d97706" stroke-width="1.5" />
+    </g>
+
+    <!-- Golden Harp Motif on Sash -->
+    <circle cx="128" cy="198" r="10" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+    <path d="M 124 194 Q 132 198 128 204" stroke="#ca8a04" stroke-width="1.5" fill="none" />
+  </g>
+</svg>

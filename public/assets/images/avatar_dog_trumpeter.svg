@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bg_dog_trumpeter" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </radialGradient>
+    <filter id="shadow_dog_trumpeter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <!-- Background circle with smooth 3D gradient -->
+  <rect width="256" height="256" rx="64" fill="url(#bg_dog_trumpeter)" />
+  <circle cx="128" cy="128" r="105" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6" />
+  
+  <!-- Floating musical note decoration -->
+    <!-- Vector musical note decorations (font-free, 100% reliable) -->
+  <g opacity="0.35" fill="#ffffff" transform="translate(28, 40) scale(0.7)">
+    <circle cx="16" cy="24" r="8" />
+    <rect x="22" y="4" width="4" height="20" rx="2" />
+    <path d="M 26 4 C 32 4, 38 8, 38 16 C 35 14, 30 12, 26 12 Z" />
+  </g>
+  <g opacity="0.35" fill="#ffffff" transform="translate(196, 48) scale(0.6)">
+    <circle cx="12" cy="24" r="7" />
+    <circle cx="32" cy="20" r="7" />
+    <rect x="17" y="6" width="3" height="18" rx="1.5" />
+    <rect x="37" y="2" width="3" height="18" rx="1.5" />
+    <polygon points="17,6 40,2 40,7 17,11" />
+  </g>
+
+  <!-- Main 3D Character Art -->
+  <g filter="url(#shadow_dog_trumpeter)">
+    
+      <!-- Floppy Ears -->
+      <ellipse cx="64" cy="125" rx="20" ry="46" fill="#b45309" transform="rotate(20 64 125)" />
+      <ellipse cx="192" cy="125" rx="20" ry="46" fill="#b45309" transform="rotate(-20 192 125)" />
+      <!-- Head -->
+      <ellipse cx="128" cy="134" rx="64" ry="58" fill="#fef08a" />
+      <!-- Snout -->
+      <ellipse cx="128" cy="152" rx="34" ry="24" fill="#ffffff" />
+      <!-- Eyes -->
+      <ellipse cx="106" cy="122" rx="8" ry="11" fill="#1e293b" />
+      <ellipse cx="150" cy="122" rx="8" ry="11" fill="#1e293b" />
+      <circle cx="108" cy="119" r="3" fill="#ffffff" />
+      <circle cx="152" cy="119" r="3" fill="#ffffff" />
+      <!-- Nose & Tongue -->
+      <ellipse cx="128" cy="146" rx="11" ry="8" fill="#1e293b" />
+      <path d="M 125 158 Q 128 170 131 158" stroke="#ef4444" stroke-width="6" stroke-linecap="round" />
+      <!-- Trumpet -->
+      <g transform="translate(136, 140) rotate(-15) scale(0.6)">
+        <polygon points="100,5 150,-15 150,55 100,35" fill="#f59e0b" stroke="#b45309" stroke-width="3" />
+        <rect x="20" y="15" width="80" height="10" fill="#f59e0b" stroke="#b45309" stroke-width="2" rx="3" />
+        <rect x="50" y="5" width="6" height="30" fill="#fcd34d" stroke="#b45309" stroke-width="1.5" />
+        <rect x="62" y="5" width="6" height="30" fill="#fcd34d" stroke="#b45309" stroke-width="1.5" />
+        <rect x="74" y="5" width="6" height="30" fill="#fcd34d" stroke="#b45309" stroke-width="1.5" />
+      </g>
+    
+  </g>
+</svg>

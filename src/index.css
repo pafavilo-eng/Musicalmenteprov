@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  font-size: 16.8px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 17.2px;
+  }
+}
+
+:root,
+[data-theme="blue"],
+[data-theme="default"] {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+
+  /* Tema Azul — Padrão (Royal & Fresh Musical Blue) */
+  --app-bg: #f0f7ff;
+  --app-card-bg: #ffffff;
+  --app-card-border: #bfdbfe;
+  --app-header-bg: rgba(239, 246, 255, 0.96);
+  --app-header-border: #93c5fd;
+  --app-text: #0f172a;
+  --app-text-muted: #334155;
+  --app-text-heading: #1e3a8a;
+  --app-primary: #2563eb;
+  --app-primary-hover: #1d4ed8;
+  --app-accent: #38bdf8;
+}
+
+[data-theme="black"] {
+  --app-bg: #09090b;
+  --app-card-bg: #141417;
+  --app-card-border: #27272a;
+  --app-header-bg: rgba(18, 18, 22, 0.96);
+  --app-header-border: #27272a;
+  --app-text: #f4f4f5;
+  --app-text-muted: #a1a1aa;
+  --app-text-heading: #93c5fd;
+  --app-primary: #3b82f6;
+  --app-primary-hover: #2563eb;
+  --app-accent: #60a5fa;
+}
+
+[data-theme="moss_green"] {
+  --app-bg: #f2f7f3;
+  --app-card-bg: #ffffff;
+  --app-card-border: #cbdcd0;
+  --app-header-bg: rgba(242, 247, 243, 0.96);
+  --app-header-border: #a3c4a8;
+  --app-text: #142417;
+  --app-text-muted: #3c5440;
+  --app-text-heading: #1c4424;
+  --app-primary: #2e6337;
+  --app-primary-hover: #234c2a;
+  --app-accent: #4ade80;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Theme Adaptation for Black and Moss Green themes */
+[data-theme="black"] .bg-white {
+  background-color: var(--app-card-bg) !important;
+  color: var(--app-text) !important;
+  border-color: var(--app-card-border) !important;
+}
+
+[data-theme="black"] header {
+  background-color: var(--app-header-bg) !important;
+  border-color: var(--app-header-border) !important;
+}
+
+[data-theme="black"] .text-slate-800,
+[data-theme="black"] .text-slate-900,
+[data-theme="black"] .text-slate-700,
+[data-theme="black"] .text-blue-950,
+[data-theme="black"] .text-indigo-950 {
+  color: var(--app-text) !important;
+}
+
+[data-theme="black"] .text-slate-600,
+[data-theme="black"] .text-slate-500,
+[data-theme="black"] .text-slate-400 {
+  color: var(--app-text-muted) !important;
+}
+
+[data-theme="black"] .border-slate-200,
+[data-theme="black"] .border-slate-100,
+[data-theme="black"] .border-blue-200,
+[data-theme="black"] .border-amber-200 {
+  border-color: var(--app-card-border) !important;
+}
+
+[data-theme="black"] .bg-slate-50,
+[data-theme="black"] .bg-slate-100,
+[data-theme="black"] .bg-blue-50,
+[data-theme="black"] .bg-amber-50 {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  color: var(--app-text) !important;
+}
+
+/* Moss green theme overrides */
+[data-theme="moss_green"] header {
+  background-color: var(--app-header-bg) !important;
+  border-color: var(--app-header-border) !important;
+}
+
+[data-theme="moss_green"] .text-indigo-950,
+[data-theme="moss_green"] .text-blue-950 {
+  color: var(--app-text-heading) !important;
+}
+
+[data-theme="moss_green"] .text-blue-700,
+[data-theme="moss_green"] .text-blue-800 {
+  color: var(--app-primary) !important;
+}
+
+[data-theme="moss_green"] .border-blue-200,
+[data-theme="moss_green"] .border-blue-300,
+[data-theme="moss_green"] .border-blue-400 {
+  border-color: var(--app-card-border) !important;
+}
+
+[data-theme="moss_green"] .bg-blue-50,
+[data-theme="moss_green"] .bg-blue-100 {
+  background-color: rgba(46, 99, 55, 0.12) !important;
+  color: var(--app-text) !important;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* 3D Tactile Buttons & Elements - Theme Adaptive */
+.btn-3d-amber {
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 5px 0 0 #1d4ed8, 0 8px 15px rgba(37, 99, 235, 0.35);
+  transition: all 0.1s ease-in-out;
+}
+.btn-3d-amber:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 #1d4ed8, 0 3px 6px rgba(37, 99, 235, 0.25);
+}
+
+[data-theme="black"] .btn-3d-amber {
+  background: linear-gradient(180deg, #3f3f46 0%, #27272a 100%);
+  box-shadow: 0 5px 0 0 #18181b, 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+[data-theme="black"] .btn-3d-amber:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 #18181b, 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="moss_green"] .btn-3d-amber {
+  background: linear-gradient(180deg, #3d7a48 0%, #2e6337 100%);
+  box-shadow: 0 5px 0 0 #1e4525, 0 8px 15px rgba(46, 99, 55, 0.35);
+}
+[data-theme="moss_green"] .btn-3d-amber:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 #1e4525, 0 3px 6px rgba(46, 99, 55, 0.25);
+}
+
+.btn-3d-blue {
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 5px 0 0 #1d4ed8, 0 8px 15px rgba(37, 99, 235, 0.35);
+  transition: all 0.1s ease-in-out;
+}
+.btn-3d-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 #1d4ed8, 0 3px 6px rgba(37, 99, 235, 0.25);
+}
+
+.btn-3d-emerald {
+  background: linear-gradient(180deg, #34d399 0%, #10b981 100%);
+  box-shadow: 0 5px 0 0 #047857, 0 8px 15px rgba(16, 185, 129, 0.35);
+  transition: all 0.1s ease-in-out;
+}
+.btn-3d-emerald:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 #047857, 0 3px 6px rgba(16, 185, 129, 0.25);
+}
+
+.btn-3d-white {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 4px 0 0 #cbd5e1, 0 6px 12px rgba(100, 116, 139, 0.15);
+  transition: all 0.1s ease-in-out;
+}
+.btn-3d-white:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #cbd5e1, 0 2px 4px rgba(100, 116, 139, 0.15);
+}
+
+@keyframes float-note {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(6deg);
+  }
+}
+
+.animate-float-note {
+  animation: float-note 3.5s ease-in-out infinite;
+}

@@ -1,0 +1,131 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Profile of an authenticated quiz participant",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "user"] },
+        "loginMethod": { "type": "string", "enum": ["google", "apple", "email", "guest"] },
+        "language": { "type": "string" },
+        "avatarId": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "highScore": { "type": "number" },
+        "totalScore": { "type": "number" },
+        "totalMatches": { "type": "number" },
+        "totalCorrect": { "type": "number" },
+        "totalQuestionsAnswered": { "type": "number" },
+        "maxCombo": { "type": "number" },
+        "unlockedAchievements": { "type": "array" },
+        "isOnline": { "type": "boolean" },
+        "lastActivity": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "loginMethod"]
+    },
+    "RankingEntry": {
+      "title": "RankingEntry",
+      "description": "Live real-time leaderboard entry for a user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "avatarId": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "score": { "type": "number" },
+        "totalScore": { "type": "number" },
+        "highScore": { "type": "number" },
+        "correctCount": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "maxCombo": { "type": "number" },
+        "clef": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "name", "avatarId", "totalScore"]
+    },
+    "ScoreHistoryEntry": {
+      "title": "ScoreHistoryEntry",
+      "description": "Historical record of each point adjustment",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatarId": { "type": "string" },
+        "score": { "type": "number" },
+        "pointsAdded": { "type": "number" },
+        "isCorrect": { "type": "boolean" },
+        "reason": { "type": "string" },
+        "questionId": { "type": "string" },
+        "clef": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["userId", "pointsAdded", "timestamp"]
+    },
+    "PublicPresence": {
+      "title": "PublicPresence",
+      "description": "User online presence heartbeat",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "avatarId": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "isOnline": { "type": "boolean" },
+        "lastSeen": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "name", "isOnline"]
+    },
+    "RegisteredEmail": {
+      "title": "RegisteredEmail",
+      "description": "Email registration record for directory lookups",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "registeredAt": { "type": "string" }
+      },
+      "required": ["email"]
+    },
+    "QuestionConfig": {
+      "title": "QuestionConfig",
+      "description": "Optional dynamic question classification configuration",
+      "type": "object",
+      "properties": {
+        "questionId": { "type": "string" },
+        "clave": { "type": "string", "enum": ["sol", "fa", "do"] },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["questionId", "clave"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Registered user profiles and stats"
+    },
+    "/ranking/{userId}": {
+      "schema": "RankingEntry",
+      "description": "Real-time ranking documents for live leaderboard"
+    },
+    "/scoreHistory/{historyId}": {
+      "schema": "ScoreHistoryEntry",
+      "description": "Persistent score history audit records"
+    },
+    "/public_presence/{userId}": {
+      "schema": "PublicPresence",
+      "description": "Public online status and avatars"
+    },
+    "/registered_directory/{emailId}": {
+      "schema": "RegisteredEmail",
+      "description": "Directory for password recovery"
+    },
+    "/questions/{questionId}": {
+      "schema": "QuestionConfig",
+      "description": "Question classification overrides"
+    }
+  }
+}

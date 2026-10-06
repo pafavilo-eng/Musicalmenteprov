@@ -1,0 +1,82 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return (isAuthenticated() && (
+        request.auth.token.email in ['fabilhano@gmail.com', 'fabipixa@gmail.com'] ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.email in ['fabilhano@gmail.com', 'fabipixa@gmail.com'])
+      ));
+    }
+
+    // User Profiles
+    match /users/{userId} {
+      // Allow reading user profiles so community rankings and leaderboard work
+      allow read: if true;
+      
+      // Allow user creation and updates (preventing non-admins from claiming admin role)
+      allow create: if true;
+      allow update: if isAdmin() || (
+        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role']) ||
+        request.resource.data.role == resource.data.role ||
+        request.resource.data.role == 'user'
+      );
+      allow delete: if isAdmin();
+    }
+
+    // Real-Time Public Ranking
+    match /ranking/{userId} {
+      // Any client can read live ranking in real time
+      allow read: if true;
+      
+      // Allow creating and updating rankings
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Immutable Score History (preserves all previous scores)
+    match /scoreHistory/{historyId} {
+      // Allow reading score history
+      allow read: if true;
+      
+      // Allow recording scores
+      allow create: if true;
+      
+      // Only admin can delete or alter score history records
+      allow update, delete: if isAdmin();
+    }
+
+    // Public Presence
+    match /public_presence/{userId} {
+      allow read: if true;
+      allow create, update, delete: if true;
+    }
+
+    // User Credentials & Registered Directory
+    match /registered_directory/{emailId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    match /user_credentials/{emailId} {
+      allow read, write: if true;
+    }
+
+    // Questions and metadata
+    match /questions/{questionId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /global_stats/{statId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}

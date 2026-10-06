@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="joseph_bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#5eead4" />
+      <stop offset="60%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#115e59" />
+    </radialGradient>
+
+    <!-- 3D Skin -->
+    <radialGradient id="joseph_skin" cx="40%" cy="30%" fx="32%" fy="22%" r="65%">
+      <stop offset="0%" stop-color="#ffedd5" />
+      <stop offset="60%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fba858" />
+    </radialGradient>
+
+    <!-- 3D Hair -->
+    <radialGradient id="joseph_hair" cx="38%" cy="25%" fx="30%" fy="18%" r="65%">
+      <stop offset="0%" stop-color="#92400e" />
+      <stop offset="60%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#451a03" />
+    </radialGradient>
+
+    <filter id="shadow_3d" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="128" fill="url(#joseph_bg)" />
+  <circle cx="128" cy="128" r="122" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" />
+
+  <!-- Main 3D Cartoon Joseph -->
+  <g filter="url(#shadow_3d)">
+    <!-- Coat of Many Colors (Túnica Colorida) across shoulders and torso -->
+    <g transform="translate(68, 175)">
+      <!-- Curved colorful vertical fabric bands with 3D shadow -->
+      <path d="M 0 45 C 5 20, 20 10, 30 10 L 22 55 Z" fill="#ef4444" />
+      <path d="M 22 55 L 30 10 L 45 6 L 40 58 Z" fill="#f59e0b" />
+      <path d="M 40 58 L 45 6 L 60 5 L 60 60 Z" fill="#10b981" />
+      <path d="M 60 60 L 60 5 L 75 6 L 80 58 Z" fill="#3b82f6" />
+      <path d="M 80 58 L 75 6 L 90 10 L 98 55 Z" fill="#8b5cf6" />
+      <path d="M 98 55 L 90 10 C 100 10, 115 20, 120 45 Z" fill="#ec4899" />
+    </g>
+
+    <!-- Golden decorative neckline trim -->
+    <path d="M 104 180 Q 128 196 152 180" stroke="#fef08a" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Neck -->
+    <rect x="118" y="158" width="20" height="24" rx="10" fill="url(#joseph_skin)" />
+
+    <!-- 3D Boy Head -->
+    <ellipse cx="128" cy="126" rx="46" ry="48" fill="url(#joseph_skin)" />
+
+    <!-- Cheerful Wavy Hair with Volume -->
+    <path d="M 80 114 C 74 86, 96 72, 128 72 C 160 72, 182 86, 176 114 C 180 100, 168 84, 150 84 C 138 84, 134 94, 128 94 C 122 94, 118 84, 106 84 C 88 84, 76 100, 80 114 Z" fill="url(#joseph_hair)" />
+    <!-- Friendly forehead curl -->
+    <circle cx="128" cy="92" r="10" fill="url(#joseph_hair)" />
+
+    <!-- Bright Cartoon Eyes -->
+    <ellipse cx="110" cy="124" rx="10" ry="13" fill="#ffffff" />
+    <ellipse cx="146" cy="124" rx="10" ry="13" fill="#ffffff" />
+    <!-- Emerald Green / Hazel Iris -->
+    <circle cx="111" cy="124" r="7.5" fill="#047857" />
+    <circle cx="145" cy="124" r="7.5" fill="#047857" />
+    <circle cx="111" cy="124" r="4.5" fill="#022c22" />
+    <circle cx="145" cy="124" r="4.5" fill="#022c22" />
+    <!-- Specular Catchlights -->
+    <circle cx="109" cy="121" r="3" fill="#ffffff" />
+    <circle cx="143" cy="121" r="3" fill="#ffffff" />
+    <circle cx="113" cy="126" r="1.3" fill="#ffffff" />
+    <circle cx="147" cy="126" r="1.3" fill="#ffffff" />
+    <!-- Friendly Eyebrows -->
+    <path d="M 98 112 Q 110 108 122 112" stroke="#451a03" stroke-width="2.2" fill="none" stroke-linecap="round" />
+    <path d="M 134 112 Q 146 108 158 112" stroke="#451a03" stroke-width="2.2" fill="none" stroke-linecap="round" />
+
+    <!-- Cute Nose -->
+    <path d="M 127 132 Q 128 136 129 132" stroke="#d97706" stroke-width="2" fill="none" stroke-linecap="round" />
+
+    <!-- Rosy Glowing Cheeks -->
+    <circle cx="96" cy="138" r="9" fill="#f43f5e" opacity="0.4" />
+    <circle cx="160" cy="138" r="9" fill="#f43f5e" opacity="0.4" />
+
+    <!-- Big Happy Radiant Smile -->
+    <path d="M 116 144 Q 128 158 140 144" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 120 146 Q 128 154 136 146" fill="#ef4444" opacity="0.8" />
+  </g>
+</svg>

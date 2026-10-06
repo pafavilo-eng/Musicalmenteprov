@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="noah_bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="60%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </radialGradient>
+
+    <!-- 3D Skin -->
+    <radialGradient id="noah_skin" cx="40%" cy="30%" fx="32%" fy="22%" r="65%">
+      <stop offset="0%" stop-color="#ffedd5" />
+      <stop offset="60%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fba858" />
+    </radialGradient>
+
+    <!-- 3D Soft Grey/Brown Hair -->
+    <radialGradient id="noah_hair" cx="38%" cy="25%" fx="30%" fy="18%" r="65%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="60%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </radialGradient>
+
+    <filter id="shadow_3d" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="128" fill="url(#noah_bg)" />
+  <circle cx="128" cy="128" r="122" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" />
+
+  <!-- Main 3D Cartoon Noah -->
+  <g filter="url(#shadow_3d)">
+    <!-- Forest Green Robe -->
+    <ellipse cx="128" cy="222" rx="58" ry="42" fill="#065f46" />
+    <path d="M 104 180 Q 128 196 152 180" stroke="#fef08a" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Neck -->
+    <rect x="118" y="160" width="20" height="24" rx="10" fill="url(#noah_skin)" />
+
+    <!-- 3D Face -->
+    <ellipse cx="128" cy="126" rx="46" ry="48" fill="url(#noah_skin)" />
+
+    <!-- Soft Fluffy White/Grey Rounded Beard -->
+    <path d="M 92 136 C 92 174, 164 174, 164 136 C 154 166, 102 166, 92 136 Z" fill="url(#noah_hair)" />
+
+    <!-- Hair with Volume and Curls -->
+    <path d="M 78 114 C 74 80, 100 68, 128 68 C 156 68, 182 80, 178 114 C 182 100, 170 82, 150 82 C 136 82, 134 92, 128 92 C 122 92, 120 82, 106 82 C 86 82, 74 100, 78 114 Z" fill="url(#noah_hair)" />
+
+    <!-- Big Kind Cartoon Eyes -->
+    <ellipse cx="110" cy="124" rx="10" ry="13" fill="#ffffff" />
+    <ellipse cx="146" cy="124" rx="10" ry="13" fill="#ffffff" />
+    <circle cx="111" cy="124" r="7.5" fill="#047857" />
+    <circle cx="145" cy="124" r="7.5" fill="#047857" />
+    <circle cx="111" cy="124" r="4.5" fill="#064e3b" />
+    <circle cx="145" cy="124" r="4.5" fill="#064e3b" />
+    <circle cx="109" cy="121" r="3" fill="#ffffff" />
+    <circle cx="143" cy="121" r="3" fill="#ffffff" />
+    <circle cx="113" cy="126" r="1.3" fill="#ffffff" />
+    <circle cx="147" cy="126" r="1.3" fill="#ffffff" />
+    <!-- Kind Eyebrows -->
+    <path d="M 98 112 Q 110 108 122 112" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 134 112 Q 146 108 158 112" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Cute Nose -->
+    <path d="M 127 132 Q 128 136 129 132" stroke="#d97706" stroke-width="2" fill="none" stroke-linecap="round" />
+
+    <!-- Rosy Cheeks -->
+    <circle cx="96" cy="136" r="9" fill="#f43f5e" opacity="0.4" />
+    <circle cx="160" cy="136" r="9" fill="#f43f5e" opacity="0.4" />
+
+    <!-- Gentle Warm Smile -->
+    <path d="M 118 144 Q 128 154 138 144" stroke="#9a3412" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Little 3D White Dove on Shoulder -->
+    <g transform="translate(170, 142) scale(0.9)">
+      <!-- Dove Body -->
+      <ellipse cx="14" cy="12" rx="14" ry="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <!-- Dove Wing -->
+      <path d="M 6 10 Q 14 0 22 10 Q 14 16 6 10 Z" fill="#f1f5f9" />
+      <!-- Dove Head -->
+      <circle cx="24" cy="6" r="7" fill="#ffffff" />
+      <!-- Tiny Eye -->
+      <circle cx="26" cy="5" r="1.5" fill="#0f172a" />
+      <!-- Golden Beak with Olive Leaf -->
+      <polygon points="30,6 36,8 30,10" fill="#f59e0b" />
+      <path d="M 36 8 Q 42 4 44 8 Q 40 10 36 8 Z" fill="#22c55e" />
+    </g>
+  </g>
+</svg>
